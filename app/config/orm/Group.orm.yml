@@ -1,0 +1,10 @@
+App\Domain\Entity\Group:
+  type: entity
+  repositoryClass: App\Infrastructure\Repository\GroupRepository
+  table: groups
+  id:
+    id:
+      type: uuid
+  fields:
+    name:
+      type: groupName

@@ -1,0 +1,22 @@
+App\Domain\Entity\User:
+  type: entity
+  repositoryClass: App\Infrastructure\Repository\UserRepository
+  table: users
+  id:
+    id:
+      type: uuid
+  fields:
+    username:
+      type: username
+      length: 180
+      unique: true
+    roles:
+      type: roles
+    password:
+      type: password
+  manyToOne:
+    group:
+      targetEntity: Group
+      joinColumn:
+        name: group_id
+        referencedColumnName: id
